@@ -10,10 +10,7 @@ import org.springframework.stereotype.Component;
 @Setter
 @Getter
 @Component
-@Qualifier("cat")
-public class Cat implements Animal{
-    private int age;
-    private String name;
+public class Cat extends Animal{
     @Override
     public void run() {
         System.out.println("i am a cat and i am running right now!");

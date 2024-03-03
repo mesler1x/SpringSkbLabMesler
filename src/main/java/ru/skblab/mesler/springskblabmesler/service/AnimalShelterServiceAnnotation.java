@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import ru.skblab.mesler.springskblabmesler.model.Animal;
-import ru.skblab.mesler.springskblabmesler.model.Cat;
-import ru.skblab.mesler.springskblabmesler.model.Dog;
 
 @Service
 public class AnimalShelterServiceAnnotation {

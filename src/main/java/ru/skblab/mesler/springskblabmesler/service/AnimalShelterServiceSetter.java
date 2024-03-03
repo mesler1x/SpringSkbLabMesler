@@ -9,18 +9,16 @@ import ru.skblab.mesler.springskblabmesler.model.Dog;
 
 @Service
 public class AnimalShelterServiceSetter {
-    @Qualifier("dog")
     private Animal dog;
-    @Qualifier("cat")
     private Animal cat;
 
     @Autowired
-    private void setDog(Dog dog){
+    private void setDog(@Qualifier("dog") Dog dog){
         this.dog = dog;
     }
 
     @Autowired
-    private void setCat(Cat cat){
+    private void setCat(@Qualifier("cat") Cat cat){
         this.cat = cat;
     }
 

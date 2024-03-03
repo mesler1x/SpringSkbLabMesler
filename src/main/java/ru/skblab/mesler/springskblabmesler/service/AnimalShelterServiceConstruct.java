@@ -1,6 +1,5 @@
 package ru.skblab.mesler.springskblabmesler.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import ru.skblab.mesler.springskblabmesler.model.Animal;
@@ -9,14 +8,10 @@ import ru.skblab.mesler.springskblabmesler.model.Dog;
 
 @Service
 public class AnimalShelterServiceConstruct {
-    @Qualifier("dog")
     private final Animal dog;
-    @Qualifier("cat")
     private final Animal cat;
 
-
-    @Autowired
-    public AnimalShelterServiceConstruct(Dog dog, Cat cat) {
+    public AnimalShelterServiceConstruct(@Qualifier("dog") Dog dog, @Qualifier("cat") Cat cat) {
         this.dog = dog;
         this.cat = cat;
     }
